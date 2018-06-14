@@ -1,0 +1,6 @@
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Install the google-chrome in the brew-cask
+    apt: name=google-chrome state=present
+
