@@ -22,3 +22,11 @@ chmod +x /usr/local/bin/docker-compose
 
 echo "export DISPLAY=localhost:0.0" >> ~/.bashrc
 echo "export DOCKER_HOST='tcp://0.0.0.0:2375'" >> ~/.bashrc
+
+# install phpenv
+curl -L http://git.io/phpenv-installer | bash
+echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(phpenv init -)"' >> ~/.bashrc
+
+apt install -y libssl-dev libmcrypt-dev libreadline-dev libxslt1-dev libxml2-dev libbz2-dev libcurl4-openssl-dev libpng-dev libjpeg-dev libmcrypt-dev libsqlite-dev libtidy-dev libltdl-dev make autoconf automake re2c lemon
+apt install -y libevent-dev
