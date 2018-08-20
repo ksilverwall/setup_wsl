@@ -1,0 +1,5 @@
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Setup task tools
+    apt: name=taskwarrior state=present

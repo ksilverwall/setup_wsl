@@ -2,9 +2,20 @@
 
 set -eu
 
-apt-add-repository -y ppa:ansible/ansible
-apt update
-apt install -y ansible
+sudo apt update
+
+##############################
+# Setup python3 env
+
+sudo apt install -y python3-pip
+pip3 install ansible
+pip3 install awscli
+
+# other softwares
+ansible-playbook wsl_setup.yml
+
+##############################
+# Should be ansibled
 
 dpkg-reconfigure openssh-server
 apt install -y x11-apps xinit
@@ -23,10 +34,3 @@ echo 'eval "$(phpenv init -)"' >> ~/.bashrc
 apt install -y libssl-dev libmcrypt-dev libreadline-dev libxslt1-dev libxml2-dev libbz2-dev libcurl4-openssl-dev libpng-dev libjpeg-dev libmcrypt-dev libsqlite-dev libtidy-dev libltdl-dev make autoconf automake re2c lemon
 apt install -y libevent-dev
 
-# install python3
-apt install -y python3-pip
-
-# install for aws
-pip install awscli
-
-apt install taskwarrior
