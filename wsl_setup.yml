@@ -1,5 +1,12 @@
 - hosts: localhost
-  become: yes
+  become: no
+  vars:
+    user: wsl
+    group: wsl
+    php_version: 7.2.9
   tasks:
   - name: Setup task tools
     apt: name=taskwarrior state=present
+    become: yes
+  roles:
+    - phpenv
