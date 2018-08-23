@@ -8,8 +8,10 @@ sudo apt update
 # Setup python3 env
 
 sudo apt install -y python3-pip
+sudo apt install -y python-pip
 pip3 install ansible
 pip3 install awscli
+pip2 install boto3
 
 # other softwares
 ansible-playbook wsl_setup.yml
