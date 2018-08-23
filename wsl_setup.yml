@@ -8,5 +8,8 @@
   - name: Setup task tools
     apt: name=taskwarrior state=present
     become: yes
+  - name: Setup jq
+    apt: name=jq state=present
+    become: yes
   roles:
     - phpenv

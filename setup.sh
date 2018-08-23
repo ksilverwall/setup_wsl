@@ -32,5 +32,5 @@ echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(phpenv init -)"' >> ~/.bashrc
 
 apt install -y libssl-dev libmcrypt-dev libreadline-dev libxslt1-dev libxml2-dev libbz2-dev libcurl4-openssl-dev libpng-dev libjpeg-dev libmcrypt-dev libsqlite-dev libtidy-dev libltdl-dev make autoconf automake re2c lemon
-apt install -y libevent-dev
+apt install -y libevent-dev -K
 
