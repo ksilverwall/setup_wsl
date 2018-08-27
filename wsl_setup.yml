@@ -5,11 +5,27 @@
     group: wsl
     php_version: 7.2.9
   tasks:
+  - name: Install settings
+    copy: src=wsl.conf dest=/etc/wsl.conf
+    become: yes
   - name: Setup task tools
     apt: name=taskwarrior state=present
     become: yes
   - name: Setup jq
     apt: name=jq state=present
     become: yes
+  - name: Setup mcrypt for php
+    apt: name={{ item }} state=present
+    become: yes
+    with_items:
+      - mcrypt
+      - php-mcrypt
+      - php-dev
+      - libmcrypt-dev
+      - gcc
+      - make
+      - autoconf
+      - libc-dev
+      - pkg-config
   roles:
     - phpenv
