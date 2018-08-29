@@ -3,7 +3,7 @@
   vars:
     user: wsl
     group: wsl
-    php_version: 7.2.9
+    php_version: 5.4.16
   tasks:
   - name: Install settings
     copy: src=wsl.conf dest=/etc/wsl.conf
