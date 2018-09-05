@@ -19,6 +19,10 @@ ansible-playbook wsl_setup.yml -K
 ##############################
 # Should be ansibled
 
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update
+sudo apt-get install python3.6 python3.6-dev
+
 dpkg-reconfigure openssh-server
 sudo apt install -y x11-apps xinit
 
