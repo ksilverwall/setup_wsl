@@ -5,6 +5,14 @@
     group: wsl
     php_version: 5.4.16
   tasks:
+  - name: Enable add-apt-repository
+    block:
+    - name: Install apt-file
+      apt: name=apt-file state=present
+      become: yes
+    - name: Install software-properties-common
+      apt: name=software-properties-common state=present
+      become: yes
   - name: Install settings
     copy: src=wsl.conf dest=/etc/wsl.conf
     become: yes
