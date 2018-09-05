@@ -1,0 +1,10 @@
+- name: setup mysql
+  apt: name=mysql-server state=present
+  become: yes
+
+- name: enable service
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+  become: yes

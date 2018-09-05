@@ -36,3 +36,4 @@
       - pkg-config
   roles:
     - phpenv
+    - mysql
